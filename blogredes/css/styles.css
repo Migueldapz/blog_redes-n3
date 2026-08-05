@@ -1,0 +1,112 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+:root {
+  --color-bg: #0e0e0e;
+  --color-surface: rgba(26, 25, 25, 0.80);
+  --color-primary: #a3a6ff;
+  --color-text: #ffffff;
+  --color-text-muted: #adaaaa;
+
+  --nav-height: 64px;
+  --nav-padding: 2rem;
+
+   --color-text-secondary: #c1c1c1; /* ← NOVO: cor de texto secundária para descrições e detalhes */
+  --base-font:
+    "Inter", sans-serif; /* ← NOVO: define a fonte base para todas as seções */
+  --max-width-nav: 1400px; /* ← NOVO: largura máxima da barra de navegação */
+  --max-width-content: 1280px; /* ← NOVO: largura máxima das seções de conteúdo */
+  --border-radius: 0.5rem; /* ← NOVO: borda arredondada para botões e elementos de destaque */
+  --color-border: rgba(
+    72,
+    72,
+    71,
+    0.3
+  ); /* ← NOVO: cor de borda suave para elementos como botões e cards */
+  --color-divisor: rgba(
+    72,
+    72,
+    71,
+    0.15
+  ); 
+}
+
+.site-header {
+  height: var(--nav-height);
+  background: var(--color-surface);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 var(--nav-padding);
+   max-width: var(
+    --max-width-nav
+  ); /* ← NOVO: largura máxima da barra de navegação */
+  margin: 0 auto; 
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-entrar {
+  text-decoration: none;
+  color: var(--color-primary);
+  border: 1px solid #484847;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.btn-search {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+main {
+  max-width: var(
+    --max-width-content
+  ); /* ← NOVO: largura máxima das seções de conteúdo */
+  margin: 2rem auto 0; /* ← NOVO: centraliza o conteúdo e adiciona margem superior para espaçamento abaixo da navbar */
+  padding: 0 1rem; /* ← NOVO: padding horizontal para garantir que o conteúdo não encoste nas bordas em telas pequenas */
+}
